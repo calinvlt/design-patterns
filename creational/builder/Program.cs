@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using builder;
+using builder.ConcreteImplementations;
 
-Console.WriteLine("Hello, World!");
+AircraftBuilder builder = new F16Builder();
+builder.BuildCockpit();
+builder.BuildEngine();
+builder.BuildWings();
+
+IAircraft aircraft = builder.Build();
+
